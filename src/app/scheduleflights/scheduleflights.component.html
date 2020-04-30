@@ -1,0 +1,36 @@
+<div class="container">
+
+  <h3>schedule flight Info</h3>
+
+<form>
+  <div class="form-group">
+    <label for="flightNumber">flightNumber:</label>
+    <input type="text" [(ngModel)]="scheduling.flightNumber" placeholder="Enter flightNumber" name="flightNumber" class="form-control" id="flightNumber" required>
+  </div>
+  <div class="form-group md-form form-lg ">
+    <label for="scheduleId">scheduleId</label>
+    <input type="text" [(ngModel)]="scheduling.schedule.scheduleId" placeholder="Enter id" name="scheduleId" class="form-control" id="scheduleId"required>
+  </div>
+  
+  <div class="form-group">
+    <label for="sourceAirport">Enter source airport</label>
+    <input [(ngModel)]="scheduling.schedule.sourceAirport" placeholder="enter source" name="sourceAirport" class="form-control" id="sourceAirport" required>
+  </div>
+  <div class="form-group">
+    <label for="destinationAirport">Enter destination airport</label>
+    <input [(ngModel)]="scheduling.schedule.destinationAirport" placeholder="enter destination" name="destinationAirport" class="form-control" id="destinationAirport" required>
+  </div>
+  <div class="form-group">
+    <label for="arrivalDate"> arrivalDate</label>
+    <input  type="datetime-local" [(ngModel)]="scheduling.schedule.arrivalDate" name="arrivalDate" class="form-control" id="arrivalDate" required>
+  </div>
+
+  <button class="btn btn-success" (click)="updateSchedule()">update</button>
+</form>
+</div>
+
+<div class=" row justify-content-center align-items-center">
+
+<h4><p class="font-weight-bolder b"> {{result}}</p></h4>
+
+</div>

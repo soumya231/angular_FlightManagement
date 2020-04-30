@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "FlightManagement"
+    }
+  },
+  "defaultProject": "FlightManagement",
+  "cli": {
+    "analytics": "ef202696-255a-4ebc-b4a8-04338fb0ef9c"
+  }
 }

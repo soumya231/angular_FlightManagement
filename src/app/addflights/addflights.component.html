@@ -1,0 +1,34 @@
+
+  <h2 class="text-center text-success b">Create Account</h2>
+  <div class="row justify-content-center align-items-center h-100 a">
+    
+  <form>
+    <div class="form-group">
+      <label for="flightNumber">FlightNumber:</label>
+      <input type="text" [(ngModel)]="flight.scheduleFlight.flightNumber" placeholder="Enter number" name="flightNumber" class="form-control" id="flightNumber" required>
+    </div>
+    <div class="form-group md-form form-lg ">
+      <label for="carrierName">carrier Name</label>
+      <input type="text" [(ngModel)]="flight.carrierName" placeholder="Enter Name" name="carrierName" class="form-control" id="carrierName"required>
+    </div>
+    <div class="form-group md-form form-lg ">
+        <label for="flightModel">carrier Name</label>
+        <input type="text" [(ngModel)]="flight.flightModel" placeholder="Enter model" name="flightModel" class="form-control" id="flightModel"required>
+      </div>
+
+    <div class="form-group">
+      <label for="seatCapacity">Enter salary</label>
+      <input [(ngModel)]="flight.seatCapacity" placeholder="seats" name="seatCapacity" class="form-control" id="seatCapacity" required>
+    </div>
+  
+ 
+    <button class="btn btn-success" (click)="AddFlight()">Create</button>
+  </form>
+</div>
+
+<div class=" row justify-content-center align-items-center">
+
+ <h4><p class="font-weight-bolder b"> {{result}}</p></h4>
+
+</div>
+
