@@ -17,7 +17,7 @@ export class AddflightsComponent implements OnInit {
 
   ngOnInit(){
   }
-  AddFlight():void{
+  onSubmit():void{
     this.flightservice.AddFlight(this.flight)
         .subscribe(data => {
             this.result=data});

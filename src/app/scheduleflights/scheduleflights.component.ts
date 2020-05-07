@@ -16,13 +16,11 @@ export class ScheduleflightsComponent implements OnInit {
     result:string;
 
   constructor(private scheduleservice:FlightService) {
-    setInterval(()=>{
-      
-    },1000)
+    
     }
 
   ngOnInit() {}
-  updateSchedule():void{
+  onSubmit():void{
     
     this.scheduleservice.updateSchedule(this.scheduling)
         .subscribe(data => {this.result=data});
