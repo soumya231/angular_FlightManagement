@@ -23,8 +23,11 @@ export class ScheduleflightsComponent implements OnInit {
   onSubmit():void{
     
     this.scheduleservice.updateSchedule(this.scheduling)
-        .subscribe(data => {this.result=data});
-        
-       
+        .subscribe(data => {this.result=data},
+          error=>{console.log("exception occured" );
+        this.result="FlightNumber not exists";
+        }
+          
+          )
 }
 }

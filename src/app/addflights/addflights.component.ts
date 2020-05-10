@@ -19,8 +19,11 @@ export class AddflightsComponent implements OnInit {
   }
   onSubmit():void{
     this.flightservice.AddFlight(this.flight)
-        .subscribe(data => {
-            this.result=data});
+         .subscribe(data => {this.result=data},
+          error=>{console.log("error occured" );
+        this.result="Flight exists";
+        })
+            
     
 }
 }
